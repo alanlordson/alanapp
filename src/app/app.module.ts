@@ -10,21 +10,34 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
-import { OneComponent } from './one/one.component';
 
+import { RouterModule, Routes } from '@angular/router';
+import { OneComponent } from './one/one.component';
+import { TwoComponent } from './two/two.component';
+import { TestComponent } from './test/test.component';
+import { ThreeComponent } from './three/three.component';
+
+const routes: Routes = [
+  {path:'one',   component:OneComponent},
+  {path:'two',   component:TwoComponent},
+  {path:'three', component:ThreeComponent}
+];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    OneComponent
+    OneComponent,
+    TwoComponent,
+    TestComponent,
+    ThreeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,MatCardModule,MatIconModule,MatSidenavModule,
-    MatFormFieldModule,MatSelectModule
+    MatFormFieldModule,MatSelectModule, RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
