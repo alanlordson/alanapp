@@ -1,0 +1,16 @@
+<p>Five works!</p>
+
+//Event binding                                 <br>
+<input type="text" (keyup)="somethingTyped()"/>              //keyup           <br><br>
+<input type="text" (keydown)="somethingTyped()"/>            //keydown         <br><br>
+<input type="text" (keypress)="somethingTyped()"/>           //keypress        <br><br>
+<input type="text" (keypress)="somethingPress($event)"/>     //keypress event  <br><br>
+<input type="text" (keypress)="targetValue($event)"/>        //target value    <br><br>
+
+<input type="text" (blur)="somethingBlur()"/>          //blur      <br><br>
+<input type="text" (focus)="somethingFocus()"/>        //focus     <br><br>
+
+
+<button (click)="buttonClick()">    Click me</button>  //single Click   <br><br>
+<button (dblclick)="buttonClick()"> Click me</button>  //double click   <br><br>      
+<button (mouseover)="buttonClick()">Click me</button>  //mouse over - more in angular docs

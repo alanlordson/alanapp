@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThreeComponent implements OnInit {
 
+  constructor() { }
+
 //Variable
   num1 = 10;
   num2 = 20;
@@ -15,8 +17,8 @@ export class ThreeComponent implements OnInit {
   val1:number = 5;
   val2:number = 2;
 
+  dis1:boolean = true;
 
-  constructor() { }
 
   ngOnInit(): void {
     let number = 15;

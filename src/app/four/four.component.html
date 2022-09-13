@@ -1,0 +1,25 @@
+<p>Four works!</p>
+<input type="text" value="{{ name }}"/>        <br><br>
+
+//Property binding  <br>
+<input type="text" [value]="name"/>            <br>
+{{ (num1 === 10) ? 'Ten' : 'Not Ten' }}        <br>
+<input type="text" [disabled]="dis1"/>         <br>
+
+<p class="ajish">Hello Ajish</p>
+<p [class.ajish]="true">Hello Ajish</p>
+<p [class.ajish]="dis1">Hello Ajish</p>
+
+//Class binding
+<p [class]="strClass">String class</p>
+<p [class]="objClass">Object class</p>
+<p [class]="arrClass">Array class</p>
+
+//Style binding
+<p [style.color]="'red'">Colour style</p>
+<p [style.fontSize]="'20px'">Font size</p>
+<p [style.fontSize.px]="25">Font size</p>
+<p [class]="{
+    color:'green',
+    fontSize:'30px'
+            }">Object design</p>

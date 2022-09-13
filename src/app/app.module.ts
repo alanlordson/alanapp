@@ -16,11 +16,19 @@ import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
 import { TestComponent } from './test/test.component';
 import { ThreeComponent } from './three/three.component';
+import { FourComponent } from './four/four.component';
+import { FiveComponent } from './five/five.component';
+import { SixComponent } from './six/six.component';
+
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path:'one',   component:OneComponent},
   {path:'two',   component:TwoComponent},
-  {path:'three', component:ThreeComponent}
+  {path:'three', component:ThreeComponent},
+  {path:'four',  component:FourComponent},
+  {path:'five',  component:FiveComponent},
+  {path:'six',   component:SixComponent}
 ];
 
 
@@ -30,14 +38,19 @@ const routes: Routes = [
     OneComponent,
     TwoComponent,
     TestComponent,
-    ThreeComponent
+    ThreeComponent,
+    FourComponent,
+    FiveComponent,
+    SixComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,MatCardModule,MatIconModule,MatSidenavModule,
-    MatFormFieldModule,MatSelectModule, RouterModule.forRoot(routes)
+    MatFormFieldModule,MatSelectModule,
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
